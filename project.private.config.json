@@ -1,0 +1,8 @@
+{
+  "projectname": "tinyXLS",
+  "setting": {
+    "compileHotReLoad": true
+  },
+  "description": "tinyXLS",
+  "libVersion": "2.27.2"
+}

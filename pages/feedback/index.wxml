@@ -1,0 +1,8 @@
+<!--pages/feedback/index.wxml-->
+
+<view>
+  <textarea class="feedback-content" placeholder="请输入反馈内容" model:value="{{ content }}"></textarea>
+</view>
+<view class="feedback-button">
+  <t-button theme="danger" block bindtap="save">提交</t-button>
+</view>

@@ -1,0 +1,15 @@
+<!--components/move-menu/move-menu.wxml-->
+<movable-area class='movable-area menuarea'>
+  <movable-view class='movable-view menu_box' direction="all" inertia="true" x="{{ x }}" y="{{ y }}">
+    <view hidden='{{showmenus}}' class='sub_menus'>
+      <block wx:for='{{menulist}}' wx:key='menulist'>
+        <view class='menu_main' catchtap='itemclick' data-item='{{item}}'>
+          <text class='menu_title' hidden='{{mainmodel.title.length > 0 ? flase:true}}'>{{item.title}}</text>
+        </view>
+      </block>
+    </view>
+    <view catchtap='showclick' class='vMenuMain menu_main'>
+      <t-icon name="menu-fold" size="xl" />
+    </view>
+  </movable-view>
+</movable-area>

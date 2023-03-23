@@ -1,0 +1,19 @@
+<!--pages/about/version.wxml-->
+<view class="content">
+  <view>
+    <h2>下一版本功能</h2>
+    <text>
+      1.添加上传文件功能
+      2.修复页面闪烁的问题
+    </text>
+  </view>
+  <view>
+    <h2>版本号: 1.0</h2>
+    <text>
+      1.添加分类
+      2.根据分类添加数据
+      3.在反馈里填写您需要的功能
+    </text>
+  </view>
+  <view class="copyright">© tinyXLS</view>
+</view>

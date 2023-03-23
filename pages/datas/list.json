@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "分类",
+  "usingComponents": {
+    "menu": "/components/move-menu/move-menu"
+  }
+}

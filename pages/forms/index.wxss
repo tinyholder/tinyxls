@@ -1,0 +1,16 @@
+/* pages/forms/index.wxss */
+
+.content {
+  color: #666;
+}
+
+.download {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  width: 200rpx;
+  margin: 16rpx 0 16rpx 0;
+  font-size: 24rpx;
+}

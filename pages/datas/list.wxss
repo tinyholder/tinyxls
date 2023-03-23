@@ -1,0 +1,57 @@
+/* pages/datas/list.wxss */
+
+.content-container {
+  padding-bottom: calc(constant(safe-area-inset-bottom) + 50px);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 50px);
+}
+
+.t-cell__description-text {
+  white-space: pre-line;
+}
+
+.block--right {
+  width: 87vw;
+  height: 100vh;
+  border-radius: 0;
+  background-color: #fff;
+  border-radius: 32rpx 0 0 32rpx;
+}
+
+.filter_buttons {
+  display: flex;
+  padding: 16rpx;
+  margin-top: 24rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category_popup {
+  padding: 48rpx;
+  box-sizing: border-box;
+}
+
+.category_popup_title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #888;
+  margin-bottom: 16rpx;
+  display: inline-block;
+}
+
+.search_text_group {
+  margin-left: -20rpx;
+  margin-right: -20rpx;
+}
+
+.search_text_group .t-input__name {
+  font-size: 32rpx;
+  color: #888;
+}
+
+.t-input {
+  align-items: center;
+}
+
+.search_text_group .t-input__control {
+  text-align: right;
+}

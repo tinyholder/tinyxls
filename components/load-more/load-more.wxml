@@ -1,0 +1,7 @@
+<!--components/load-more/load-more.wxml-->
+
+<view>
+  <view class="loadmore" hidden='{{ !showThis }}' bindtap="clickLoadMore">
+    <text>{{ text }}</text>
+  </view>
+</view>

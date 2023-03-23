@@ -1,0 +1,43 @@
+<!--pages/datas/detail/detail.wxml-->
+<view>
+  <view class="listing">
+    <block wx:for="{{ contents }}" wx:for-item="item" wx:for-index="i" wx:key="this">
+      <view wx:if="{{ item.field_id == 1 }}">
+        <t-input value="{{ item.content }}" label="{{ item.title }}" align="right" data-idx="{{i}}" type="text" bindchange="textValueChanged" />
+      </view>
+      <view wx:if="{{ item.field_id == 2 }}">
+        <t-textarea value="{{ item.content }}" label="{{ item.title }}" placeholder="" data-idx="{{i}}" autosize bindchange="textValueChanged" />
+      </view>
+      <view wx:elif="{{ item.field_id == 3 }}">
+        <t-input value="{{ item.content }}" label="{{ item.title }}" align="right" data-idx="{{i}}" type="digit" bindchange="textValueChanged" />
+      </view>
+      <view wx:elif="{{ item.field_id == 4 }}">
+        <t-input value="{{ item.content }}" label="{{ item.title }}" align="right" data-idx="{{i}}" data-title="{{ item.title }}" data-mode="minute" data-format="YYYY-MM-DD HH:mm" data-value="{{ item.content }}" type="text" bind:tap="handleCalendar" />
+      </view>
+      <view wx:elif="{{ item.field_id == 5 }}">
+        <t-input value="{{ item.content }}" label="{{ item.title }}" align="right" data-idx="{{i}}" data-title="{{ item.title }}" data-mode="date" data-format="YYYY-MM-DD" data-value="{{ item.content }}" type="text" bind:tap="handleCalendar" />
+      </view>
+      <view wx:elif="{{ item.field_id == 6 }}">
+        <t-input value="{{ item.content }}" label="{{ item.title }}" align="right" data-idx="{{i}}" data-title="{{ item.title }}" data-mode="null,minute" data-format="HH:mm" data-value="{{ item.content }}" type="text" bind:tap="handleCalendar" />
+      </view>
+      <view wx:elif="{{ item.field_id == 7 }}">
+        <t-dropdown-menu>
+          <t-dropdown-item id="singleSelect_{{i}}" data-idx="{{i}}" label="{{ item.title }}" options="{{item.options}}" value="{{ item.content }}" bindchange="handleSingleSelect" />
+          <view class="select_content">{{ item.showContent }}</view>
+        </t-dropdown-menu>
+      </view>
+      <view wx:elif="{{ item.field_id == 8 }}">
+        <t-dropdown-menu>
+          <t-dropdown-item id="singleSelect_{{i}}" data-idx="{{i}}" label="{{ item.title }}" options="{{item.options}}" value="{{ item.content }}" bindchange="handleMultipleSelect" multiple />
+        </t-dropdown-menu>
+        <view class="select_content">{{ item.showContent }}</view>
+      </view>
+    </block>
+  </view>
+  <view class="btn-save">
+    <t-button theme="danger" block bindtap="save">保存</t-button>
+  </view>
+  <t-date-time-picker title="{{ dtSetting.title }}" visible="{{ dtSetting.visible }}" data-idx="{{ dtSetting.index }}" mode="{{ dtSetting.mode }}" value="{{ dtSetting.date }}" format="{{ dtSetting.format }}" bindconfirm="handleDTPickerConfirm" bindcancel="hideDTPicker"></t-date-time-picker>
+
+
+</view>

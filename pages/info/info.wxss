@@ -1,0 +1,45 @@
+/* pages/info/info.wxss */
+
+.user_info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 48rpx;
+  margin-bottom: 48rpx;
+  padding: 0 32rpx;
+}
+
+.user_info image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  margin-right: 40rpx;
+}
+
+.btn-login {
+  margin-top: 48rpx;
+  padding: 0 32rpx;
+}
+
+.btn-login .t-button {
+  border-radius: 48rpx;
+  font-size: 32rpx;
+}
+
+.customer_design {
+  background: linear-gradient(to right, #202737, #2d384a, #202737);
+  margin: 24rpx 0;
+  padding: 48rpx 32rpx;
+  color: #fff;
+  color: #bbb;
+}
+
+.customer_design text {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.customer_design view {
+  font-size: 40rpx;
+  margin-top: 24rpx;
+}

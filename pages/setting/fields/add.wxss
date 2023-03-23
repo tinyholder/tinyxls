@@ -1,0 +1,79 @@
+/* pages/setting/fields/add.wxss */
+
+.main {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.pannel-item {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx 32rpx;
+}
+
+.pannel-text {
+  display: flex;
+  align-items: center;
+}
+
+.t-icon-chevron-right {
+  font-size: 16px;
+  color: #212121;
+}
+
+.btn-save {
+  margin-top: 48rpx;
+  padding: 0 5%;
+}
+
+.btn-save .t-button {
+  border-radius: 48rpx;
+  font-size: 32rpx;
+}
+
+
+.drop-front {
+  padding: 0 32rpx;
+  background-color: #fff;
+}
+
+.selection-item {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.selection-item t-radio {
+  display: inline-block;
+}
+
+.selection-item .t-radio__border {
+  border-top: none;
+}
+
+.multi-selection-content {
+  width: 100%;
+  padding: 0 32rpx;
+  font-size: 28rpx;
+}
+
+.selection-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx 32rpx;
+  border-bottom: 1px solid #ddd;
+}
+
+.selection-buttons button {
+  font-size: 28rpx;
+  background-color: #fff;
+  border-color: #fff;
+  border-radius: 0;
+  margin: 0;
+}
+
+.selection-buttons button.confirm {
+  color: #0052d9;
+}

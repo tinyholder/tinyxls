@@ -1,0 +1,40 @@
+<!--pages/datas/review.wxml-->
+
+
+<view>
+  <view class="content-container">
+    <block wx:for="{{ list }}" wx:key="this">
+      <t-cell title="{{ item.title }}" description="{{ item.desc }}" hover arrow bindtap="detail" data-id="{{ item.id }}" />
+    </block>
+  </view>
+
+  <menu bindmenuItemClick="menuItemClick" mainmodel="{{mainmodel}}" menulist="{{menulist}}"></menu>
+
+  <t-popup visible="{{filtering}}" bind:visible-change="onVisibleChange" placement="right">
+    <view class="block block--right category_popup">
+      <label class="category_popup_title">当前分类: {{ category.title }}</label>
+      <block wx:for="{{ category.items }}" wx:for-index="i" wx:key="this">
+        <block wx:if="{{ item.is_list === 1 }}">
+          <view class="search_text_group" wx:if="{{ item.field_id === 1 || item.field_id === 2 }}">
+            <t-input label="{{ item.title }}" value="{{ item.value }}" data-id="{{ item.id }}" placeholder="" suffix="" bindchange="onTextInput" />
+          </view>
+          <view class="search_text_group" wx:if="{{ item.field_id === 3 }}">
+            <t-input label="{{ item.title }}" value="{{ item.value }}" data-id="{{ item.id }}" placeholder="0" suffix="" bindchange="onNumberInput" error-message="{{item.error ? '请输入正确的数字' : ''}}" t-class-error-msg="error-msg" />
+          </view>
+          <view class="search_text_group" wx:if="{{ item.field_id === 5 }}">
+            <t-input label="{{ item.title }}" align="right" data-id="{{ item.id }}" data-idx="{{i}}" data-title="{{ item.title }}" data-mode="date" data-format="YYYY-MM-DD" value="{{ item.value }}" type="text" bind:tap="handleCalendar" />
+          </view>
+        </block>
+      </block>
+      <view class="filter_buttons">
+
+        <t-button variant="outline" block bindtap="cancelSearch">取消</t-button>
+
+        <t-button theme="primary" block bindtap="search">搜索</t-button>
+      </view>
+    </view>
+  </t-popup>
+
+
+  <t-date-time-picker title="{{ dtSetting.title }}" visible="{{ dtSetting.visible }}" data-id="{{ dtSetting.id }}" mode="{{ dtSetting.mode }}" value="{{ dtSetting.date }}" format="{{ dtSetting.format }}" bindconfirm="handleDTPickerConfirm" bindcancel="hideDTPicker"></t-date-time-picker>
+</view>

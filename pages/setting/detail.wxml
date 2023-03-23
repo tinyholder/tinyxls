@@ -1,0 +1,47 @@
+<!--pages/setting/detail.wxml-->
+
+<view class="main">
+
+  <view>
+    <t-input model:value="{{ title }}" label="标题" placeholder="请输入标题" align="right" />
+    <t-cell wx:if="{{ tabEnable }}" title="底部导航">
+      <t-switch value="{{is_tabbar === 1 ? true : false}}" bindchange="onChangeTabbar" colors="{{['#00A870']}}" slot="note" />
+    </t-cell>
+    <t-cell title="唯一">
+      <t-switch value="{{is_unique == 1 ? true : false}}" bindchange="onChangeUnique" colors="{{['#00A870']}}" slot="note" />
+    </t-cell>
+    <t-cell title="启用">
+      <t-switch value="{{is_active === 1 ? true : false}}" bindchange="onChangeActive" colors="{{['#00A870']}}" slot="note" />
+    </t-cell>
+
+  </view>
+
+  <view class="demo-section__wrapper">
+    <block wx:for="{{ items }}" wx:key="this">
+
+      <t-swipe-cell>
+        <t-cell title="{{ item.title }}" note="{{ item.field }}" bordered="{{false}}" data-id="{{ item.id }}" bindtap="editField" />
+        <view slot="right" class="t-swipe-cell-demo-btn delete-btn" bind:tap="onDelete" data-id="{{ item.id }}">删除</view>
+      </t-swipe-cell>
+    </block>
+  </view>
+
+  <view class="btn-container">
+    <view class="btn-review" wx:if="{{ id > 0 }}">
+      <t-button variant="outline" block bindtap="reviewDetail">查看数据</t-button>
+    </view>
+
+    <view class="btn-add">
+      <t-button variant="outline" block bindtap="addField">添加字段</t-button>
+    </view>
+
+    <view class="btn-save">
+      <t-button theme="danger" block bindtap="save">保存</t-button>
+    </view>
+  </view>
+
+  <t-message id="t-message" />
+
+  <!-- 链式调用基础 -->
+  <t-dialog id="t-dialog" />
+</view>

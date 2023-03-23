@@ -1,0 +1,90 @@
+{
+  "description": "tinyXLS",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "scopeDataCheck": false,
+    "coverView": true,
+    "es6": true,
+    "postcss": true,
+    "compileHotReLoad": false,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "autoAudits": false,
+    "newFeature": true,
+    "uglifyFileName": false,
+    "uploadWithSourceMap": true,
+    "useIsolateContext": true,
+    "nodeModules": true,
+    "enhance": false,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "showShadowRootInWxmlPanel": true,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": true,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "useStaticServer": true,
+    "showES6CompileOption": false,
+    "checkInvalidKey": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "minifyWXML": true,
+    "condition": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.11.3",
+  "appid": "",
+  "projectname": "tinyXLS",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "custom",
+          "pathName": "pages/button/button",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "rate",
+          "pathName": "pages/rate/rate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "indexes",
+          "pathName": "pages/indexes/indexes",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "swiper",
+          "pathName": "pages/swiper/swiper",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "actionSheet",
+          "pathName": "pages/action-sheet/action-sheet",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}

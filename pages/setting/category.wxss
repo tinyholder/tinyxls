@@ -1,0 +1,45 @@
+/* pages/setting/category.wxss */
+
+.main {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: calc(constant(safe-area-inset-bottom) + 160rpx);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 160rpx);
+}
+
+.t-swipe-cell-demo-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 144rpx;
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+
+.t-swipe-cell-demo-btn.delete-btn {
+  background-color: #e34d59;
+}
+
+.btn-save {
+  padding-top: 48rpx;
+  position: fixed;
+  z-index: 9;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #eee;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.btn-save .t-button {
+  border-radius: 48rpx;
+  font-size: 32rpx;
+  margin: 0 5%;
+  width: 90%;
+}
+
+.t-button.t-is-block {
+  width: 90% !important;
+}

@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/info/info",
+    "pages/setting/category",
+    "pages/setting/detail",
+    "pages/setting/fields/add",
+    "pages/datas/list",
+    "pages/feedback/index",
+    "pages/datas/detail/detail",
+    "pages/about/version",
+    "pages/datas/review",
+    "pages/forms/index"
+  ],
+  "tabBar": {
+    "custom": true,
+    "list": [{
+        "pagePath": "pages/datas/list",
+        "text": "数据"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "usingComponents": {
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-cell": "tdesign-miniprogram/cell/cell",
+    "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
+    "t-dialog": "tdesign-miniprogram/dialog/dialog",
+    "t-icon": "tdesign-miniprogram/icon/icon",
+    "t-picker": "tdesign-miniprogram/picker/picker",
+    "t-picker-column": "tdesign-miniprogram/picker/picker-column",
+    "t-input": "tdesign-miniprogram/input/input",
+    "t-textarea": "tdesign-miniprogram/textarea/textarea",
+    "t-message": "tdesign-miniprogram/message/message",
+    "t-radio": "tdesign-miniprogram/radio/radio",
+    "t-radio-group": "tdesign-miniprogram/radio-group/radio-group",
+    "t-swipe-cell": "tdesign-miniprogram/swipe-cell/swipe-cell",
+    "t-switch": "tdesign-miniprogram/switch/switch",
+    "t-popup": "tdesign-miniprogram/popup/popup",
+    "t-dropdown-menu": "tdesign-miniprogram/dropdown-menu/dropdown-menu",
+    "t-dropdown-item": "tdesign-miniprogram/dropdown-menu/dropdown-item",
+    "t-pull-down-refresh": "tdesign-miniprogram/pull-down-refresh/pull-down-refresh",
+    "t-date-time-picker": "tdesign-miniprogram/date-time-picker/date-time-picker",
+    "t-collapse": "tdesign-miniprogram/collapse/collapse",
+    "t-collapse-panel": "tdesign-miniprogram/collapse/collapse-panel"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f6f6f6",
+    "backgroundColor": "#f6f6f6",
+    "navigationBarTitleText": "tinyXLS",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

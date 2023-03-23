@@ -1,0 +1,143 @@
+/* pages/datas/detail/detail.wxss */
+
+.listing>view {
+  position: relative;
+  background-color: #fff;
+}
+
+.t-input__name {
+  color: #888;
+  font-size: 32rpx;
+  line-height: 48rpx;
+}
+
+.t-dropdown-menu__item {
+  padding: 0 !important;
+}
+
+.t-dropdown-menu__title {
+  padding: 24rpx 32rpx;
+  color: #888;
+  font-size: 32rpx;
+}
+
+.t-dropdown-item__content {
+  top: auto !important;
+}
+
+.t-is-single.t-dropdown-item__content {
+  padding-bottom: 24px;
+  background-color: #fff;
+}
+
+.t-dropdown-item__body>t-checkbox-group {
+  width: 100%;
+  left: 0;
+}
+
+.t-dropdown-menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.t-dropdown-menu__bar {
+  width: 100%;
+}
+
+.t-dropdown-menu__item {
+  justify-content: space-between !important;
+}
+
+.t-dropdown-menu__title {
+  width: 100% !important;
+}
+
+.t-dropdown-menu__icon {
+  display: none;
+}
+
+.t-input--bordered::after {
+  left: 0 !important;
+}
+
+.t-dropdown-menu .t-dropdown-menu__bar {
+  background-color: transparent;
+  z-index: 1 !important;
+}
+
+.t-textarea {
+  display: flex;
+}
+
+.t-textarea::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: ' ';
+  pointer-events: none;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px solid #e7e7e7;
+  transform: scaleY(0.5);
+  left: 32rpx;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(231, 231, 231);
+}
+
+.t-textarea__wrapper-textarea {
+  text-align: right !important;
+  line-height: 18px !important;
+}
+
+.t-textarea__name.t-class-label,
+.t-textarea__name:not(:empty) {
+  width: 164rpx;
+  margin-right: 32rpx;
+  flex: none;
+  color: #888 !important;
+  display: flex;
+  align-items: center;
+}
+
+.t-textarea__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex: auto;
+}
+
+.select_content {
+  position: absolute;
+  right: 32rpx;
+  top: 0;
+  width: 50%;
+  text-align: right;
+  font-size: 32rpx;
+  color: #000;
+  padding: 24rpx 0;
+}
+
+.btn-save {
+  padding-top: 48rpx;
+  position: fixed;
+  z-index: 9;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #eee;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.btn-save .t-button {
+  border-radius: 48rpx;
+  font-size: 32rpx;
+  margin: 0 5%;
+  width: 90%;
+}
+
+.t-button.t-is-block {
+  width: 90% !important;
+}

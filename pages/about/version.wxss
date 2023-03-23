@@ -1,0 +1,27 @@
+/* pages/about/version.wxss */
+.content {
+  padding: 24rpx 32rpx;
+}
+
+.content>view {
+  margin-bottom: 24px;
+  color: #666;
+  font-size: 28rpx;
+}
+
+text {
+  line-height: 48rpx;
+}
+
+h2 {
+  font-size: 24rpx;
+  font-weight: 700;
+  padding: 8px 0;
+  display: inline-block;
+  color: #000;
+}
+
+.copyright {
+  text-align: center;
+  color: #aaa !important;
+}

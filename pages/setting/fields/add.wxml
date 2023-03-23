@@ -1,0 +1,52 @@
+<!--pages/setting/fields/add.wxml-->
+
+<view class="main">
+
+  <view>
+    <t-input model:value="{{ title }}" label="名称" placeholder="请输入标题" align="right" />
+    <t-cell title="允许为空">
+      <t-switch value="{{is_allow_empty === 1 ? true : false}}" bindchange="onChangeAllowEmpty" colors="{{['#00A870']}}" slot="note" />
+    </t-cell>
+    <t-cell title="列表中显示">
+      <t-switch value="{{is_list === 1 ? true : false}}" bindchange="onChangeList" colors="{{['#00A870']}}" slot="note" />
+    </t-cell>
+
+    <view class="pannel-item" bind:tap="onClickPicker" data-index="{{1}}">
+      <view class="pannel-label">数据类型</view>
+      <view class="pannel-text {{selectedFieldType.text ? '' : 'empty'}}">{{selectedFieldType.text || '选择类型'}}
+        <t-icon name="chevron-right" color="rgba(0, 0, 0, 0.26)" size="24px" />
+      </view>
+
+    </view>
+
+  </view>
+
+  <t-picker visible="{{pickerVisible}}" title="" cancelBtn="取消" confirmBtn="确认" bindchange="onPickerChange" bindconfirm="onPicker1Confirm" bindcancel="onPicker1Cancel">
+    <t-picker-column options="{{fields}}" value="{{selectedFieldType.text}}" bindchange="onColumnChange"></t-picker-column>
+  </t-picker>
+
+  <view class="drop-front" wx:if="{{ radioVisible }}">
+    <view>
+      <t-radio-group class="selection-item" bind:change="onRadioChange" defaultValue="{{ radioValue }}">
+        <t-radio value="1" label="自定义选项" />
+        <t-radio value="2" label="绑定其它分类" />
+      </t-radio-group>
+    </view>
+    <t-textarea model:value="{{ content }}" wx:if='{{ radioVisible && radioValue == "1" }}' placeholder="请输入选项内容，多个选项请换行" />
+
+    <view class="multi-selection-content" wx:if="{{ radioVisible && radioValue == '2' }}">
+      <t-radio-group bind:change="onCategoryRadioChange" defaultValue="{{ categoryContent ? categoryContent[0].category : '0' }}">
+        <block wx:for="{{ otherCategories }}" wx:key="this">
+          <t-radio value="{{ item.value }}" label="{{ item.label }}" />
+        </block>
+      </t-radio-group>
+    </view>
+  </view>
+
+  <view class="btn-save">
+    <t-button theme="danger" block bindtap="save">保存</t-button>
+  </view>
+
+  <t-message id="t-message" />
+
+</view>

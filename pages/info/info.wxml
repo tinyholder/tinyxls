@@ -1,0 +1,28 @@
+<view class="main">
+
+  <block wx:if="{{ user }}">
+    <view class="user_info">
+      <image src="{{ user.user_avater }}"></image>
+      <text>{{ user.user_name }}</text>
+    </view>
+  </block>
+
+  <view>
+    <t-cell wx:if="{{ user }}" title="分类" hover arrow bindtap="setting" />
+    <t-cell wx:if="{{ user }}" title="反馈" hover arrow bindtap="feedback" />
+    <t-cell title="模板" hover arrow bindtap="getTemplate" />
+    <t-cell title="关于" hover arrow bindtap="about" />
+  </view>
+
+  <view class="customer_design">
+    <text>立即开始</text>
+    <view>定制您的专属表单</view>
+  </view>
+
+  <view class="btn-login" wx:if="{{ !user }}">
+    <t-button theme="danger" block bindgetuserinfo="login" openType="getUserInfo">登录</t-button>
+  </view>
+
+
+  <t-message id="t-message" />
+</view>

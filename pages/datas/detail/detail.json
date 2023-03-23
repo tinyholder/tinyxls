@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "t-input": "tdesign-miniprogram/input/input",
+    "t-dropdown-menu": "tdesign-miniprogram/dropdown-menu/dropdown-menu",
+    "t-dropdown-item": "tdesign-miniprogram/dropdown-menu/dropdown-item"
+  }
+}
